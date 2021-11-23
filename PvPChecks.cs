@@ -185,7 +185,7 @@ namespace PvPChecks
 		private void OnTeleport(object sender, GetDataHandlers.TeleportEventArgs args)
 		{
 			if (!args.Player.TPlayer.hostile) return;
-			if (args.Player.HasPermission("pvpchecks.ignore")) return;
+			if (args.Player.HasPermission("pvpchecks.rod")) return;
 			
 			args.Player.Disable("Used teleporting in pvp.", DisableFlags.None);
 			args.Player.Teleport(args.Player.TPlayer.position.X, args.Player.TPlayer.position.Y);
